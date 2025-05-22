@@ -93,6 +93,14 @@ Tests on [testautomationpractice.blogspot.com](https://testautomationpractice.bl
 - 🔘 Radio buttons (Male/Female)  
 - ☑️ Checkboxes (Single/Multiple)  
 
+### 4. `Alerts.cy.js` - JavaScript Alerts & Authentication
+Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com):
+- 🔔 JS Alert — Validate standard alert text  
+- ✅ Confirm Alert (OK and Cancel) — Validate user confirmation behavior  
+- ✍️ Prompt Alert — Stub prompt input and validate text entry  
+- ❌ Prompt Cancel — Stub prompt with `null` and validate cancel behavior  
+- 🔐 Basic Auth — Access protected pages using `{auth: {username, password}}` options
+
 ---
 
 ## 🤝 Contributing
