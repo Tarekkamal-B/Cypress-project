@@ -101,6 +101,12 @@ Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com):
 - ❌ Prompt Cancel — Stub prompt with `null` and validate cancel behavior  
 - 🔐 Basic Auth — Access protected pages using `{auth: {username, password}}` options
 
+### 5. `Tabs.cy.js` - Handling Browser Tabs
+Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com/windows):
+- 🔗 **Approach 1** — Remove `target` attribute and open the new tab in the same window  
+- 🔗 **Approach 2** — Extract the URL from the link, visit it directly, then return to the parent tab  
+- ✅ Validates both child and parent content using `cy.visit()` and `cy.go('back')`
+
 ---
 
 ## 🤝 Contributing
