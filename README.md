@@ -88,12 +88,12 @@ Tests **OrangeHRM** demo site:
 
 *Uses custom command:* `cy.login(username, password)`.
 
-### 3. `RadioButtonAndCheckBox.cy.js` - Input Testing
+### 3. `RadioButtonAndCheckBox.cy.js` - Input Testing  
 Tests on [testautomationpractice.blogspot.com](https://testautomationpractice.blogspot.com/):
 - 🔘 Radio buttons (Male/Female)  
 - ☑️ Checkboxes (Single/Multiple)  
 
-### 4. `Alerts.cy.js` - JavaScript Alerts & Authentication
+### 4. `Alerts.cy.js` - JavaScript Alerts & Authentication  
 Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com):
 - 🔔 JS Alert — Validate standard alert text  
 - ✅ Confirm Alert (OK and Cancel) — Validate user confirmation behavior  
@@ -101,11 +101,17 @@ Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com):
 - ❌ Prompt Cancel — Stub prompt with `null` and validate cancel behavior  
 - 🔐 Basic Auth — Access protected pages using `{auth: {username, password}}` options
 
-### 5. `Tabs.cy.js` - Handling Browser Tabs
-Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com/windows):
+### 5. `Tabs.cy.js` - Handling Browser Tabs  
+Tests on [the-internet.herokuapp.com/windows](https://the-internet.herokuapp.com/windows):
 - 🔗 **Approach 1** — Remove `target` attribute and open the new tab in the same window  
 - 🔗 **Approach 2** — Extract the URL from the link, visit it directly, then return to the parent tab  
 - ✅ Validates both child and parent content using `cy.visit()` and `cy.go('back')`
+
+### 6. `iframes.cy.js` - Handling Iframes  
+Tests on [practice.expandtesting.com/iframe](https://practice.expandtesting.com/iframe):
+- 🧩 **Approach 1** — Manually access iframe via `contentDocument.body` and wrap it  
+- 🧩 **Approach 2** — Use custom command `cy.GetIframe(selector)` to simplify iframe handling  
+- 🧩 **Approach 3** — Use `cypress-iframe` plugin for clean, reusable iframe interactions with `cy.frameLoaded()` and `cy.iframe()`
 
 ---
 
