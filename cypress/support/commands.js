@@ -33,3 +33,12 @@ Cypress.Commands.add('login',(username,password)=>{
     cy.get('input[placeholder="Password"]').type(password);
     cy.get('button[type="submit"]').click();
 })
+
+Cypress.Commands.add('GetIframe',(iframe_locator)=>{
+
+    return cy.get(iframe_locator)
+                .its('0.contentDocument.body')
+                .should('be.visible')
+                .then(cy.wrap);
+
+})
