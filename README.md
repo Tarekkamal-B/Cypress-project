@@ -113,6 +113,21 @@ Tests on [practice.expandtesting.com/iframe](https://practice.expandtesting.com/
 - 🧩 **Approach 2** — Use custom command `cy.GetIframe(selector)` to simplify iframe handling  
 - 🧩 **Approach 3** — Use `cypress-iframe` plugin for clean, reusable iframe interactions with `cy.frameLoaded()` and `cy.iframe()`
 
+### 7. `Table.cy.js` - Handling Tables
+Tests on [OpenCart Reports Admin Panel](https://demo3x.opencartreports.com/admin/):
+- 🔐 Logs in with username and password  
+- 🔢 Checks number of table **rows** and **columns**  
+- 📊 Validates specific **cell data** (e.g., "$2,107.67")  
+- 📄 Reads all table data from the **first page**  
+- 📈 Extracts and logs the **total number of pages**
+
+### 8. `PaginationTable.cy.js` - Handling Pagination
+Tests on [DataTables Example](https://datatables.net/examples/basic_init/alt_pagination.html):
+- 🔢 Logs total number of employees  
+- 🔄 Iterates through paginated table (pages 3 to 7)  
+- 📊 Logs values from the **Office** column on each page
+
+
 ---
 
 ## 🤝 Contributing
