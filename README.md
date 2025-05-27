@@ -19,13 +19,19 @@ This repository contains **automated end-to-end (E2E) tests** written in Cypress
 ---
 
 ## 🚀 Project Overview
-This project provides a **solid foundation for automated UI testing** using Cypress. It covers common web elements like:
-- Dropdowns 📌
+This project provides a **solid foundation for automated UI testing** using Cypress. It covers a wide range of common web elements and user interactions, including but not limited to:
+
+- Dropdowns 📌  
 - Radio buttons 🔘  
 - Checkboxes ☑️  
 - Login flows 🔐  
+- JavaScript alerts and authentication dialogs 🔔  
+- Handling browser tabs 🔗  
+- Working with iframes 🧩  
+- Managing tables and pagination 🔢  
+- Mouse operations like hover, right-click, double click, drag and drop, and scrolling 🖱️  
 
-Tests run on **real websites** and follow **maintainable, scalable** automation best practices.
+Tests run on **real websites** and follow **maintainable, scalable** automation best practices, leveraging Page Object Model (POM), custom commands, and CI/CD integration.
 
 ---
 
@@ -126,6 +132,14 @@ Tests on [DataTables Example](https://datatables.net/examples/basic_init/alt_pag
 - 🔢 Logs total number of employees  
 - 🔄 Iterates through paginated table (pages 3 to 7)  
 - 📊 Logs values from the **Office** column on each page
+
+### 9. `MouseOperations.cy.js` - Mouse Operations  
+Tests various mouse-related user interactions on multiple websites, including:  
+- 🖱️ Mouse Hover using `cypress-real-events` plugin on [the-internet.herokuapp.com/hovers](https://the-internet.herokuapp.com/hovers)  
+- 🖱️ Right Click (context menu) detection and handling on [the-internet.herokuapp.com/context_menu](https://the-internet.herokuapp.com/context_menu) and [jQuery context menu demo](https://swisnl.github.io/jQuery-contextMenu/demo.html)  
+- 🖱️ Double Click event testing on [testautomationpractice.blogspot.com](https://testautomationpractice.blogspot.com/)  
+- 🖱️ Drag and Drop using plugin on [dhtmlgoodies.com drag drop demo](http://www.dhtmlgoodies.com/packages/dhtml-suite-for-applications/demos/demo-drag-drop-3.html)  
+- 🖱️ Scrolling page to elements and footer validation on [countries-ofthe-world.com](https://www.countries-ofthe-world.com/flags-of-the-world.html)  
 
 
 ---
