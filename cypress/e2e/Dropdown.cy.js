@@ -24,11 +24,12 @@ describe("Hanlding Dropdown",()=>{
         
     })
 
-    it("Dynamic Dropdown ",()=>{
+    it.only("Dynamic Dropdown ",()=>{
 
         cy.visit("https://www.google.com/");
 
-        cy.get("#APjFqb").type("cypress automation");
+        cy.get("#APjFqb").type("cypress automation",{delay:100});
+        cy.get(".wM6W7d").should('be.visible');
         cy.get(".wM6W7d").each(($el, index, $list)=>{
             if($el.text()=='cypress automation tool')
             {
@@ -37,6 +38,7 @@ describe("Hanlding Dropdown",()=>{
         })
         
         cy.get("#APjFqb").should('have.value','cypress automation tool');
+        
     })
 
 
