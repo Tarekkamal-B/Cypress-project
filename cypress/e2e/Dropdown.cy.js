@@ -24,7 +24,7 @@ describe("Hanlding Dropdown",()=>{
         
     })
 
-    it.only("Dynamic Dropdown ",()=>{
+    it.skip("Dynamic Dropdown ",()=>{
 
         cy.visit("https://www.google.com/");
 
