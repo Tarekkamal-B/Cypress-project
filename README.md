@@ -1,5 +1,7 @@
 # Cypress Automation Project �
 
+[![Run Cypress Tests](https://github.com/Tarekkamal-B/Cypress-project/actions/workflows/cypress-tests.yml/badge.svg)](https://github.com/Tarekkamal-B/Cypress-project/actions/workflows/cypress-tests.yml)
+
 ![Cypress Logo](https://www.cypress.io/static/cypress-io-logo-social-share-8fb8a1db3cdc0b289fad927694ecb415.png)
 
 This repository contains **automated end-to-end (E2E) tests** written in Cypress to validate UI components and user flows across various websites. The tests demonstrate Cypress best practices, including the **Page Object Model**, **custom commands**, and **CI/CD integration**.
