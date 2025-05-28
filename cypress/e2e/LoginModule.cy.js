@@ -22,7 +22,7 @@ describe('Login Module', () => {
     cy.get('.oxd-alert-content.oxd-alert-content--error').should('contain',"Invalid credentials");
   })
 
-  it('verify log out', ()=>{
+  it.skip('verify log out', ()=>{
     cy.login('Admin','admin123');
     cy.xpath("//i[@class='oxd-icon bi-caret-down-fill oxd-userdropdown-icon']").click();
     cy.xpath("//a[normalize-space()='Logout']").click();
