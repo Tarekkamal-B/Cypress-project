@@ -20,7 +20,7 @@ describe("Hanlding Dropdown",()=>{
         cy.visit("https://www.wikipedia.org/");
         
         cy.get("#searchInput").click().type("Egypt");
-        cy.get(".suggestion-link").contains("Egypt national football team").click();
+        cy.get(".suggestion-link").contains("Egypt").click();
         
     })
 
