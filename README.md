@@ -1,8 +1,11 @@
-# Cypress Automation Project �
+Here is your updated `README.md` in **Markdown format**, including the new **"File Upload"** test suite section:
+
+````markdown
+# Cypress Automation Project 🚀
 
 [![Run Cypress Tests](https://github.com/Tarekkamal-B/Cypress-project/actions/workflows/cypress-tests.yml/badge.svg)](https://github.com/Tarekkamal-B/Cypress-project/actions/workflows/cypress-tests.yml)
 
-![Cypress Logo](https://www.cypress.io/static/cypress-io-logo-social-share-8fb8a1db3cdc0b289fad927694ecb415.png)
+![Cypress Logo](https://raw.githubusercontent.com/cypress-io/cypress/develop/assets/cypress-logo.png)
 
 This repository contains **automated end-to-end (E2E) tests** written in Cypress to validate UI components and user flows across various websites. The tests demonstrate Cypress best practices, including the **Page Object Model**, **custom commands**, and **CI/CD integration**.
 
@@ -32,8 +35,7 @@ This project provides a **solid foundation for automated UI testing** using Cypr
 - Working with iframes 🧩  
 - Managing tables and pagination 🔢  
 - Mouse operations like hover, right-click, double click, drag and drop, and scrolling 🖱️  
-
-Tests run on **real websites** and follow **maintainable, scalable** automation best practices, leveraging Page Object Model (POM), custom commands, and CI/CD integration.
+- File uploads including Shadow DOM elements 📤
 
 ---
 
@@ -58,8 +60,10 @@ Tests run on **real websites** and follow **maintainable, scalable** automation 
    ```bash
    git clone https://github.com/Tarekkamal-B/Cypress-project.git
    cd Cypress-project
-   ```
+````
+
 2. **Install dependencies**:
+
    ```bash
    npm install
    ```
@@ -67,13 +71,17 @@ Tests run on **real websites** and follow **maintainable, scalable** automation 
 ---
 
 ## 🧪 Running Tests
+
 ### Open Cypress Test Runner (GUI)
+
 ```bash
 npx cypress open
 ```
+
 *Select any test file to run interactively.*
 
 ### Run All Tests Headlessly
+
 ```bash
 npx cypress run
 ```
@@ -83,76 +91,103 @@ npx cypress run
 ## 📂 Test Suites
 
 ### 1. `Dropdown.cy.js` - Handling Dropdowns
-- **Dropdown With Select**: Selects "Apple" from [letcode.in](https://letcode.in/dropdowns).  
-- **Dropdown Without Select**: Selects "Egypt" from [dummyticket.com](https://www.dummyticket.com/).  
-- **Auto-Suggestion Dropdown**: Searches "Egypt" on [Wikipedia](https://www.wikipedia.org/).  
-- **Dynamic Dropdown**: Tests Google search suggestions for "cypress automation".  
+
+* **Dropdown With Select**: Selects "Apple" from [letcode.in](https://letcode.in/dropdowns)
+* **Dropdown Without Select**: Selects "Egypt" from [dummyticket.com](https://www.dummyticket.com/)
+* **Auto-Suggestion Dropdown**: Searches "Egypt" on [Wikipedia](https://www.wikipedia.org/)
+* **Dynamic Dropdown**: Tests Google search suggestions for "cypress automation"
 
 ### 2. `LoginModule.cy.js` - Login Flows
+
 Tests **OrangeHRM** demo site:
-- ✅ Valid login → Dashboard access  
-- ❌ Invalid credentials → Error handling  
-- 🔐 Logout functionality  
 
-*Uses custom command:* `cy.login(username, password)`.
+* ✅ Valid login → Dashboard access
+* ❌ Invalid credentials → Error handling
+* 🔐 Logout functionality
+* *Uses custom command:* `cy.login(username, password)`
 
-### 3. `RadioButtonAndCheckBox.cy.js` - Input Testing  
+### 3. `RadioButtonAndCheckBox.cy.js` - Input Testing
+
 Tests on [testautomationpractice.blogspot.com](https://testautomationpractice.blogspot.com/):
-- 🔘 Radio buttons (Male/Female)  
-- ☑️ Checkboxes (Single/Multiple)  
 
-### 4. `Alerts.cy.js` - JavaScript Alerts & Authentication  
+* 🔘 Radio buttons (Male/Female)
+* ☑️ Checkboxes (Single/Multiple)
+
+### 4. `Alerts.cy.js` - JavaScript Alerts & Authentication
+
 Tests on [the-internet.herokuapp.com](https://the-internet.herokuapp.com):
-- 🔔 JS Alert — Validate standard alert text  
-- ✅ Confirm Alert (OK and Cancel) — Validate user confirmation behavior  
-- ✍️ Prompt Alert — Stub prompt input and validate text entry  
-- ❌ Prompt Cancel — Stub prompt with `null` and validate cancel behavior  
-- 🔐 Basic Auth — Access protected pages using `{auth: {username, password}}` options
 
-### 5. `Tabs.cy.js` - Handling Browser Tabs  
+* 🔔 JS Alert — Validate standard alert text
+* ✅ Confirm Alert — Validate OK/Cancel
+* ✍️ Prompt Alert — Stub input and validate
+* ❌ Prompt Cancel — Stub with `null`
+* 🔐 Basic Auth — Test protected pages with `{auth: {username, password}}`
+
+### 5. `Tabs.cy.js` - Handling Browser Tabs
+
 Tests on [the-internet.herokuapp.com/windows](https://the-internet.herokuapp.com/windows):
-- 🔗 **Approach 1** — Remove `target` attribute and open the new tab in the same window  
-- 🔗 **Approach 2** — Extract the URL from the link, visit it directly, then return to the parent tab  
-- ✅ Validates both child and parent content using `cy.visit()` and `cy.go('back')`
 
-### 6. `iframes.cy.js` - Handling Iframes  
+* 🔗 Remove `target` to open in same tab
+* 🔗 Extract URL, visit directly, and return
+* ✅ Validate both tabs with `cy.visit()` and `cy.go('back')`
+
+### 6. `iframes.cy.js` - Handling Iframes
+
 Tests on [practice.expandtesting.com/iframe](https://practice.expandtesting.com/iframe):
-- 🧩 **Approach 1** — Manually access iframe via `contentDocument.body` and wrap it  
-- 🧩 **Approach 2** — Use custom command `cy.GetIframe(selector)` to simplify iframe handling  
-- 🧩 **Approach 3** — Use `cypress-iframe` plugin for clean, reusable iframe interactions with `cy.frameLoaded()` and `cy.iframe()`
+
+* 🧩 Manual access via `contentDocument.body`
+* 🧩 Custom command `cy.GetIframe(selector)`
+* 🧩 `cypress-iframe` plugin usage with `cy.iframe()`
 
 ### 7. `Table.cy.js` - Handling Tables
+
 Tests on [OpenCart Reports Admin Panel](https://demo3x.opencartreports.com/admin/):
-- 🔐 Logs in with username and password  
-- 🔢 Checks number of table **rows** and **columns**  
-- 📊 Validates specific **cell data** (e.g., "$2,107.67")  
-- 📄 Reads all table data from the **first page**  
-- 📈 Extracts and logs the **total number of pages**
+
+* 🔐 Login with credentials
+* 🔢 Validate row & column count
+* 📊 Check specific cell values
+* 📄 Read data from first page
+* 📈 Get total page count
 
 ### 8. `PaginationTable.cy.js` - Handling Pagination
+
 Tests on [DataTables Example](https://datatables.net/examples/basic_init/alt_pagination.html):
-- 🔢 Logs total number of employees  
-- 🔄 Iterates through paginated table (pages 3 to 7)  
-- 📊 Logs values from the **Office** column on each page
 
-### 9. `MouseOperations.cy.js` - Mouse Operations  
-Tests various mouse-related user interactions on multiple websites, including:  
-- 🖱️ Mouse Hover using `cypress-real-events` plugin on [the-internet.herokuapp.com/hovers](https://the-internet.herokuapp.com/hovers)  
-- 🖱️ Right Click (context menu) detection and handling on [the-internet.herokuapp.com/context_menu](https://the-internet.herokuapp.com/context_menu) and [jQuery context menu demo](https://swisnl.github.io/jQuery-contextMenu/demo.html)  
-- 🖱️ Double Click event testing on [testautomationpractice.blogspot.com](https://testautomationpractice.blogspot.com/)  
-- 🖱️ Drag and Drop using plugin on [dhtmlgoodies.com drag drop demo](http://www.dhtmlgoodies.com/packages/dhtml-suite-for-applications/demos/demo-drag-drop-3.html)  
-- 🖱️ Scrolling page to elements and footer validation on [countries-ofthe-world.com](https://www.countries-ofthe-world.com/flags-of-the-world.html)  
+* 🔢 Count total employees
+* 🔄 Loop pages 3–7
+* 📊 Log values from "Office" column
 
+### 9. `MouseOperations.cy.js` - Mouse Operations
+
+Tests on various sites:
+
+* 🖱️ Hover using `cypress-real-events`
+* 🖱️ Right-click menu detection
+* 🖱️ Double-click validation
+* 🖱️ Drag-and-drop plugin usage
+* 🖱️ Scroll to elements & footer
+
+### 10. `FileUpload.cy.js` – File Uploads
+
+Tests various upload scenarios, including advanced ones:
+
+* 📁 **Single File Upload**: Uploads `Jmeter CSV.csv` at [the-internet.herokuapp.com/upload](https://the-internet.herokuapp.com/upload)
+* ✏️ **Rename Before Upload**: Renames to `MyJemter.csv` and verifies
+* 🖱️ **Drag and Drop Upload**: Uses `subjectType: 'drag-n-drop'`
+* 📎 **Multiple File Upload**: Uploads `Jmeter CSV.csv` and `Oreders CSV.csv` at [davidwalsh.name](https://davidwalsh.name/demo/multiple-file-upload.php)
+* 🌐 **Shadow DOM File Upload**: Upload inside a shadow-root at [htmlelements.com](https://www.htmlelements.com/demos/fileupload/shadow-dom/index.htm) using `{ includeShadowDom: true }`
 
 ---
 
 ## 🤝 Contributing
-Contributions are welcome!  
-1. **Fork** the repo  
-2. Create a **feature branch** (`git checkout -b feature/your-feature`)  
-3. **Commit** changes (`git commit -m "Add amazing test"`)  
-4. **Push** to the branch (`git push origin feature/your-feature`)  
-5. Open a **Pull Request**  
+
+Contributions are welcome!
+
+1. **Fork** the repo
+2. Create a **feature branch** (`git checkout -b feature/your-feature`)
+3. **Commit** changes (`git commit -m "Add amazing test"`)
+4. **Push** to the branch (`git push origin feature/your-feature`)
+5. Open a **Pull Request**
 
 ---
 
