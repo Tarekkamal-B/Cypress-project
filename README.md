@@ -36,6 +36,7 @@ This project provides a **solid foundation for automated UI testing** using Cypr
 - File uploads including Shadow DOM elements 📤  
 - **Data-driven testing using fixture files** 📁  
 - **Reusable test data loaded with hooks** ♻️  
+- **Browser navigation using `cy.go()` and `cy.reload()`** 🌐
 
 ---
 
@@ -168,6 +169,15 @@ Also tests login on [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com/)
 * 🔸 **Approach 1**: Direct access within test block using `.then()`  
 * 🔹 **Approach 2**: Loads fixture in `before()` hook for reuse across multiple test blocks  
 * ✅ Verifies dashboard header text on successful login  
+
+### 13. `Navigation.cy.js` – Navigation Commands  
+Tests on [litecart.net/demo](https://www.litecart.net/demo):  
+* 🌐 Visits home page and verifies title  
+* 🔗 Clicks "Translations" from navigation  
+* 🔁 Uses `cy.go('back')` and `cy.go('forward')` to navigate  
+* ⏪ Uses `cy.go(-1)` and `cy.go(1)` for back/forward  
+* 🔄 Verifies page titles and headers during navigation  
+* 🔁 Reloads the page with `cy.reload()`
 
 ---
 
