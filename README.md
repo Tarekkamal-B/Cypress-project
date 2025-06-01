@@ -2,7 +2,7 @@
 
 [![Run Cypress Tests](https://github.com/Tarekkamal-B/Cypress-project/actions/workflows/cypress-tests.yml/badge.svg)](https://github.com/Tarekkamal-B/Cypress-project/actions/workflows/cypress-tests.yml)
 
-![Cypress Logo](https://raw.githubusercontent.com/cypress-io/cypress/develop/assets/cypress-logo.png)
+![Cypress Logo](https://cdn.cypress.io/static/logo.png)
 
 This repository contains **automated end-to-end (E2E) tests** written in Cypress to validate UI components and user flows across various websites. The tests demonstrate Cypress best practices, including the **Page Object Model**, **custom commands**, and **CI/CD integration**.
 
@@ -37,6 +37,7 @@ This project provides a **solid foundation for automated UI testing** using Cypr
 - **Data-driven testing using fixture files** 📁  
 - **Reusable test data loaded with hooks** ♻️  
 - **Browser navigation using `cy.go()` and `cy.reload()`** 🌐
+- **Page Object Model (POM) for cleaner, reusable login tests** 🧰
 
 ---
 
@@ -177,7 +178,20 @@ Tests on [litecart.net/demo](https://www.litecart.net/demo):
 * 🔁 Uses `cy.go('back')` and `cy.go('forward')` to navigate  
 * ⏪ Uses `cy.go(-1)` and `cy.go(1)` for back/forward  
 * 🔄 Verifies page titles and headers during navigation  
-* 🔁 Reloads the page with `cy.reload()`
+* 🔁 Reloads the page with `cy.reload()`  
+
+### 14. `POM.cy.js` – Page Object Model Login Tests  
+Tests login flows on [OrangeHRM Demo](https://opensource-demo.orangehrmlive.com/):  
+* 📝 Demonstrates multiple login approaches:  
+  * Basic Cypress commands with direct selectors  
+  * POM usage with `LoginPage2.js` class  
+  * Fixture-driven login with POM  
+* 🔑 Validates dashboard URL and header text on successful login  
+* 🧩 Reusable `Login` class with methods:  
+  - `setUserName(username)`  
+  - `setPassword(password)`  
+  - `clickOnSubmit()`  
+  - `verifyLogin()`  
 
 ---
 
